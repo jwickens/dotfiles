@@ -16,3 +16,6 @@ email = jon@humanise.ai
 [log]
 	abbrevCommit = true
 	shortstat = true
+
+[alias]
+        remove-tags = "!f() { git tag -l ${1} | xargs -I % echo \"git tag -d % && git push --delete origin %\" | sh; }; f"
